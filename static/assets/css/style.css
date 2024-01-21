@@ -609,7 +609,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     clear: both;
 }
 .isotope .item {
+    /* max-height: 120px; */
     position:relative;
+    /* height: auto; */
     overflow:hidden;
     margin-bottom: 30px;
 }
