@@ -194,13 +194,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-4">
-						<div class="single-about-add-info">
-							<h3>phone</h3>
-							<p>(+1)425-542-4802</p>
-						</div>
-					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-8">
 						<div class="single-about-add-info">
 							<h3>email</h3>
 							<p>wongsatonkampusan@gmail.com</p>
@@ -865,16 +859,32 @@
 										<div class="col-sm-12">
 											<div class="form-group">
 												<textarea class="form-control" rows="8" id="comment"
-													placeholder="Message"></textarea>
+													placeholder="Message..."></textarea>
 											</div><!--/.form-group-->
 										</div><!--/.col-->
 									</div><!--/.row-->
 									<div class="row">
 										<div class="col-sm-12">
 											<div class="single-contact-btn">
-												<a class="contact-btn" href="#" role="button">submit</a>
+												<a class="contact-btn" role="button" onclick="sendMail();">submit</a>
 											</div><!--/.single-single-contact-btn-->
 										</div><!--/.col-->
+
+										<script>
+											function sendMail() {
+												var name = document.getElementById('name').value;
+												// var email = document.getElementById('email').value;
+												var subject = document.getElementById('subject').value;
+												var comment = document.getElementById('comment').value;
+										
+												var mailtoLink = 'mailto:wongsatonkampusan@gmail.com?subject=' + 
+																 encodeURIComponent(subject) + 
+																 '&body=' + encodeURIComponent("Hi Wongsaton, " + "\n\n My name is " + name + ".\n\n" + comment);
+										
+												window.location.href = mailtoLink;
+											}
+										</script>
+										
 									</div><!--/.row-->
 								</form><!--/form-->
 							</div><!--/.contact-form-->
@@ -888,10 +898,6 @@
 									<p>Automation, Control and Project Engineer | Developer</p>
 								</div>
 								<div class="contact-add-info">
-									<div class="single-contact-add-info">
-										<h3>phone</h3>
-										<p>(+1)425-542-4802</p>
-									</div>
 									<div class="single-contact-add-info">
 										<h3>email</h3>
 										<p>wongsatonkampusan@gmail.com</p>
